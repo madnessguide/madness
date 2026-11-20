@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="ru" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>База боссов</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/webp" href="data/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@500;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            bg: '#090405', card: '#14080a', border: '#3b1116',
+                            accent: '#ef4444', purple: '#991b1b', green: '#f87171',
+                            red: '#dc2626', yellow: '#fca5a5', text: '#f3e8e8'
+                        }
+                    },
+                    fontFamily: {
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                        display: ['Orbitron', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: radial-gradient(circle at top, #1f070a 0%, #090405 70%);
+            color: #f3e8e8;
+            font-family: 'Inter', sans-serif;
+        }
+        .font-orbitron { font-family: 'Orbitron', sans-serif; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #0d0506; }
+        ::-webkit-scrollbar-thumb { background: #4a1218; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #7f1d1d; }
+        .boss-title-clamp {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            word-break: break-word;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between p-3 sm:p-6">
+
+    <!-- Шапка -->
+    <header class="max-w-7xl w-full mx-auto mb-6 flex justify-between items-center bg-cyber-card border border-cyber-border rounded-xl p-4 shadow-xl">
+        <div class="flex items-center gap-3">
+            <h1 class="font-orbitron text-base sm:text-lg font-bold text-cyber-accent flex items-center gap-2">
+                <i class="fa-solid fa-database"></i> База данных всех боссов с игры "Безумие"
+            </h1>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="max-w-7xl w-full mx-auto flex-grow space-y-6">
+
+        <!-- Панель фильтров и поиска -->
+        <div id="filtersPanel" class="sticky top-3 z-30 bg-cyber-card/95 backdrop-blur-md border border-cyber-border rounded-xl p-3 sm:p-4 shadow-2xl space-y-3 font-mono text-xs transition-all">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="relative">
+                    <i class="fa-solid fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500"></i>
+                    <input type="text" id="searchInput" oninput="applyFilters()" placeholder="Поиск по названию, ID или этажу (A1, $2)..."
+                        class="w-full bg-cyber-bg border border-cyber-border rounded-lg pl-10 pr-4 py-2 text-cyber-text focus:outline-none focus:border-cyber-accent transition">
+                </div>
+
+                <div>
+                    <select id="floorFilter" onchange="applyFilters()" class="w-full bg-cyber-bg border border-cyber-border rounded-lg px-3 py-2 text-cyber-text focus:outline-none focus:border-cyber-accent transition">
+                        <option value="">Все этажи (A1 - $3)</option>
+                    </select>
+                </div>
+
+                <div class="relative">
+                    <input type="number" id="playerLevelInput" oninput="applyFilters()" placeholder="Ваш уровень (награды за лвл)..."
+                        class="w-full bg-cyber-bg border border-cyber-border rounded-lg px-3 py-2 text-cyber-text focus:outline-none focus:border-cyber-accent transition">
+                </div>
+            </div>
+
+            <!-- Чекбоксы фильтрации по дропам и наградам -->
+            <div class="flex flex-wrap items-center gap-4 pt-2 border-t border-cyber-border/80 text-gray-300">
+                <span class="text-cyber-accent font-orbitron font-bold text-[11px]">Фильтры дропов:</span>
+
+                <label class="flex items-center gap-1.5 cursor-pointer hover:text-cyber-accent transition">
+                    <input type="checkbox" id="filterGold" onchange="applyFilters()" class="rounded bg-cyber-bg border-cyber-border text-cyber-accent focus:ring-0">
+                    <span>Монеты 🪙</span>
+                </label>
+
+                <label class="flex items-center gap-1.5 cursor-pointer hover:text-cyber-accent transition">
+                    <input type="checkbox" id="filterPills" onchange="applyFilters()" class="rounded bg-cyber-bg border-cyber-border text-cyber-accent focus:ring-0">
+                    <span>Пилюли 💊</span>
+                </label>
+
+                <label class="flex items-center gap-1.5 cursor-pointer hover:text-cyber-accent transition">
+                    <input type="checkbox" id="filterClothing" onchange="applyFilters()" class="rounded bg-cyber-bg border-cyber-border text-cyber-accent focus:ring-0">
+                    <span>Одежда</span>
+                </label>
+
+                <label class="flex items-center gap-1.5 cursor-pointer hover:text-cyber-accent transition">
+                    <input type="checkbox" id="filterOrnaments" onchange="applyFilters()" class="rounded bg-cyber-bg border-cyber-border text-cyber-accent focus:ring-0">
+                    <span>Тату</span>
+                </label>
+
+                <label class="flex items-center gap-1.5 cursor-pointer hover:text-cyber-accent transition">
+                    <input type="checkbox" id="filterWeapons" onchange="applyFilters()" class="rounded bg-cyber-bg border-cyber-border text-cyber-accent focus:ring-0">
+                    <span>Оружие</span>
+                </label>
+
+                <label class="flex items-center gap-1.5 cursor-pointer hover:text-cyber-accent transition">
+                    <input type="checkbox" id="filterPets" onchange="applyFilters()" class="rounded bg-cyber-bg border-cyber-border text-cyber-accent focus:ring-0">
+                    <span>Питомцы</span>
+                </label>
+
+                <label class="flex items-center gap-1.5 cursor-pointer hover:text-cyber-accent transition">
+                    <input type="checkbox" id="filterRooms" onchange="applyFilters()" class="rounded bg-cyber-bg border-cyber-border text-cyber-accent focus:ring-0">
+                    <span>Комнаты</span>
+                </label>
+
+                <label class="flex items-center gap-1.5 cursor-pointer hover:text-cyber-accent transition">
+                    <input type="checkbox" id="filterSets" onchange="applyFilters()" class="rounded bg-cyber-bg border-cyber-border text-cyber-accent focus:ring-0">
+                    <span>Наборы</span>
+                </label>
+
+                <div class="ml-auto flex items-center gap-3">
+                    <button onclick="resetFilters()" class="px-3 py-1 rounded bg-cyber-bg border border-cyber-border hover:border-cyber-red text-red-400 transition text-[11px]">
+                        Сбросить
+                    </button>
+                    <div class="text-gray-400">
+                        Найдено: <span id="bossCountDisplay" class="text-cyber-accent font-bold">0</span> / <span id="totalBossesCount">108</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Сетка карточек боссов -->
+        <div id="bossesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="col-span-full text-center py-10 text-cyber-accent font-mono animate-pulse">
+                <i class="fa-solid fa-spinner fa-spin mr-2"></i> Загрузка данных боссов...
+            </div>
+        </div>
+        <button
+            id="scrollToTopBtn"
+            type="button"
+            onclick="scrollToTopSmooth()"
+            aria-label="Вверх"
+            title="Вверх"
+            class="fixed bottom-5 right-5 z-40 hidden items-center gap-2 px-3.5 py-2.5 rounded-xl bg-cyber-card/95 hover:bg-cyber-accent text-cyber-accent hover:text-white border-2 border-cyber-accent shadow-[0_0_20px_rgba(239,68,68,0.35)] font-mono text-xs font-bold transition cursor-pointer"
+        >
+            <i class="fa-solid fa-arrow-up"></i>
+            <span class="hidden sm:inline">Вверх</span>
+        </button>
+
+    </main>
+
+    <!-- Футер -->
+    <footer class="max-w-7xl w-full mx-auto mt-8 text-center text-xs font-mono text-gray-500 border-t border-cyber-border pt-4">
+        DATABASE MADNESS &bull; 2026
+    </footer>
+
+    <script>
+
+        window.scrollToTopSmooth = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        };
+
+        function updateScrollTopButtonVisibility() {
+            const btn = document.getElementById('scrollToTopBtn');
+            if (!btn) return;
+
+            if (window.scrollY > 300) {
+                btn.classList.remove('hidden');
+                btn.classList.add('flex');
+            } else {
+                btn.classList.add('hidden');
+                btn.classList.remove('flex');
+            }
+        }
+
+        window.addEventListener('scroll', updateScrollTopButtonVisibility, { passive: true });
+        updateScrollTopButtonVisibility();
+        const TOTAL_BOSSES = 108;
+        const EXTRA_DATA_FILES = ['items.json', 'ornament.json', 'sets.json'];
+
+        const FLOORS_MAP = {
+            A: {
+                A1: [
+                    { id: 1, type: 'BOSS' }, { id: 1, type: 'BIZ' }, { id: 2, type: 'BIZ' }, { id: 3, type: 'BIZ' },
+                    { id: 2, type: 'BOSS' }, { id: 1, type: 'WORK' }, { id: 1, type: 'PVP' }
+                ],
+                A2: [
+                    { id: 3, type: 'BOSS' }, { id: 4, type: 'BIZ' }, { id: 5, type: 'BIZ' }, { id: 4, type: 'BOSS' },
+                    { id: 2, type: 'WORK' }
+                ],
+                A3: [
+                    { id: 5, type: 'BOSS' }, { id: 6, type: 'BOSS' }, { id: 3, type: 'WORK' }, { id: 6, type: 'BIZ' },
+                    { id: 7, type: 'BIZ' }
+                ]
+            },
+            B: {
+                B1: [
+                    { id: 7, type: 'BOSS' }, { id: 8, type: 'BOSS' }, { id: 4, type: 'WORK' }, { id: 8, type: 'BIZ' },
+                    { id: 9, type: 'BIZ' }, { id: 2, type: 'PVP' }
+                ],
+                B2: [
+                    { id: 9, type: 'BOSS' }, { id: 10, type: 'BOSS' }, { id: 5, type: 'WORK' }, { id: 10, type: 'BIZ' }
+                ],
+                B3: [
+                    { id: 11, type: 'BOSS' }, { id: 12, type: 'BOSS' }, { id: 6, type: 'WORK' }, { id: 11, type: 'BIZ' },
+                    { id: 12, type: 'BIZ' }
+                ]
+            },
+            C: {
+                C1: [
+                    { id: 13, type: 'BOSS' }, { id: 14, type: 'BOSS' }, { id: 13, type: 'BIZ' }, { id: 14, type: 'BIZ' },
+                    { id: 7, type: 'WORK' }, { id: 3, type: 'PVP' }
+                ],
+                C2: [
+                    { id: 15, type: 'BOSS' }, { id: 16, type: 'BOSS' }, { id: 8, type: 'WORK' }, { id: 15, type: 'BIZ' },
+                    { id: 16, type: 'BIZ' }
+                ],
+                C3: [
+                    { id: 17, type: 'BOSS' }, { id: 18, type: 'BOSS' }, { id: 9, type: 'WORK' }, { id: 17, type: 'BIZ' },
+                    { id: 18, type: 'BIZ' }
+                ]
+            },
+            D: {
+                D1: [
+                    { id: 19, type: 'BOSS' }, { id: 20, type: 'BOSS' }, { id: 10, type: 'WORK' }, { id: 19, type: 'BIZ' },
+                    { id: 20, type: 'BIZ' }, { id: 4, type: 'PVP' }
+                ],
+                D2: [
+                    { id: 21, type: 'BOSS' }, { id: 22, type: 'BOSS' }, { id: 11, type: 'WORK' }, { id: 21, type: 'BIZ' },
+                    { id: 22, type: 'BIZ' }
+                ],
+                D3: [
+                    { id: 23, type: 'BOSS' }, { id: 24, type: 'BOSS' }, { id: 12, type: 'WORK' }, { id: 23, type: 'BIZ' },
+                    { id: 24, type: 'BIZ' }
+                ]
+            },
+            E: {
+                E1: [
+                    { id: 25, type: 'BOSS' }, { id: 26, type: 'BOSS' }, { id: 13, type: 'WORK' }, { id: 25, type: 'BIZ' },
+                    { id: 26, type: 'BIZ' }, { id: 5, type: 'PVP' }
+                ],
+                E2: [
+                    { id: 27, type: 'BOSS' }, { id: 28, type: 'BOSS' }, { id: 14, type: 'WORK' }, { id: 27, type: 'BIZ' },
+                    { id: 28, type: 'BIZ' }
+                ],
+                E3: [
+                    { id: 29, type: 'BOSS' }, { id: 30, type: 'BOSS' }, { id: 15, type: 'WORK' }, { id: 29, type: 'BIZ' },
+                    { id: 30, type: 'BIZ' }
+                ]
+            },
+            F: {
+                F1: [
+                    { id: 31, type: 'BOSS' }, { id: 32, type: 'BOSS' }, { id: 16, type: 'WORK' }, { id: 31, type: 'BIZ' },
+                    { id: 32, type: 'BIZ' }, { id: 6, type: 'PVP' }
+                ],
+                F2: [
+                    { id: 33, type: 'BOSS' }, { id: 34, type: 'BOSS' }, { id: 17, type: 'WORK' }, { id: 33, type: 'BIZ' },
+                    { id: 34, type: 'BIZ' }
+                ],
+                F3: [
+                    { id: 35, type: 'BOSS' }, { id: 36, type: 'BOSS' }, { id: 18, type: 'WORK' }, { id: 35, type: 'BIZ' },
+                    { id: 36, type: 'BIZ' }
+                ]
+            },
+            G: {
+                G1: [
+                    { id: 37, type: 'BOSS' }, { id: 38, type: 'BOSS' }, { id: 19, type: 'WORK' }, { id: 37, type: 'BIZ' },
+                    { id: 38, type: 'BIZ' }, { id: 7, type: 'PVP' }
+                ],
+                G2: [
+                    { id: 39, type: 'BOSS' }, { id: 40, type: 'BOSS' }, { id: 20, type: 'WORK' }, { id: 39, type: 'BIZ' },
+                    { id: 40, type: 'BIZ' }
+                ],
+                G3: [
+                    { id: 41, type: 'BOSS' }, { id: 42, type: 'BOSS' }, { id: 21, type: 'WORK' }, { id: 41, type: 'BIZ' },
+                    { id: 42, type: 'BIZ' }
+                ]
+            },
+            H: {
+                H1: [
+                    { id: 43, type: 'BOSS' }, { id: 44, type: 'BOSS' }, { id: 22, type: 'WORK' }, { id: 43, type: 'BIZ' },
+                    { id: 44, type: 'BIZ' }, { id: 8, type: 'PVP' }
+                ],
+                H2: [
+                    { id: 45, type: 'BOSS' }, { id: 46, type: 'BOSS' }, { id: 23, type: 'WORK' }, { id: 45, type: 'BIZ' },
+                    { id: 46, type: 'BIZ' }
+                ],
+                H3: [
+                    { id: 47, type: 'BOSS' }, { id: 48, type: 'BOSS' }, { id: 24, type: 'WORK' }, { id: 47, type: 'BIZ' },
+                    { id: 48, type: 'BIZ' }
+                ]
+            },
+            I: {
+                I1: [
+                    { id: 49, type: 'BOSS' }, { id: 50, type: 'BOSS' }, { id: 25, type: 'WORK' }, { id: 49, type: 'BIZ' },
+                    { id: 50, type: 'BIZ' }, { id: 9, type: 'PVP' }
+                ],
+                I2: [
+                    { id: 51, type: 'BOSS' }, { id: 52, type: 'BOSS' }, { id: 26, type: 'WORK' }, { id: 51, type: 'BIZ' },
+                    { id: 52, type: 'BIZ' }
+                ],
+                I3: [
+                    { id: 53, type: 'BOSS' }, { id: 54, type: 'BOSS' }, { id: 27, type: 'WORK' }, { id: 53, type: 'BIZ' },
+                    { id: 54, type: 'BIZ' }
+                ]
+            },
+            J: {
+                J1: [
+                    { id: 55, type: 'BOSS' }, { id: 56, type: 'BOSS' }, { id: 28, type: 'WORK' }, { id: 55, type: 'BIZ' },
+                    { id: 56, type: 'BIZ' }, { id: 10, type: 'PVP' }
+                ],
+                J2: [
+                    { id: 57, type: 'BOSS' }, { id: 58, type: 'BOSS' }, { id: 29, type: 'WORK' }, { id: 57, type: 'BIZ' },
+                    { id: 58, type: 'BIZ' }
+                ],
+                J3: [
+                    { id: 59, type: 'BOSS' }, { id: 60, type: 'BOSS' }, { id: 30, type: 'WORK' }, { id: 59, type: 'BIZ' },
+                    { id: 60, type: 'BIZ' }
+                ]
+            },
+            K: {
+                K1: [
+                    { id: 61, type: 'BOSS' }, { id: 62, type: 'BOSS' }, { id: 31, type: 'WORK' }, { id: 61, type: 'BIZ' },
+                    { id: 62, type: 'BIZ' }, { id: 11, type: 'PVP' }
+                ],
+                K2: [
+                    { id: 63, type: 'BOSS' }, { id: 64, type: 'BOSS' }, { id: 32, type: 'WORK' }, { id: 63, type: 'BIZ' },
+                    { id: 64, type: 'BIZ' }
+                ],
+                K3: [
+                    { id: 65, type: 'BOSS' }, { id: 66, type: 'BOSS' }, { id: 33, type: 'WORK' }, { id: 65, type: 'BIZ' },
+                    { id: 66, type: 'BIZ' }
+                ]
+            },
+            L: {
+                L1: [
+                    { id: 67, type: 'BOSS' }, { id: 68, type: 'BOSS' }, { id: 34, type: 'WORK' }, { id: 67, type: 'BIZ' },
+                    { id: 68, type: 'BIZ' }, { id: 12, type: 'PVP' }
+                ],
+                L2: [
+                    { id: 69, type: 'BOSS' }, { id: 70, type: 'BOSS' }, { id: 35, type: 'WORK' }, { id: 69, type: 'BIZ' },
+                    { id: 70, type: 'BIZ' }
+                ],
+                L3: [
+                    { id: 71, type: 'BOSS' }, { id: 72, type: 'BOSS' }, { id: 36, type: 'WORK' }, { id: 71, type: 'BIZ' },
+                    { id: 72, type: 'BIZ' }
+                ]
+            },
+            M: {
+                M1: [
+                    { id: 73, type: 'BOSS' }, { id: 74, type: 'BOSS' }, { id: 37, type: 'WORK' }, { id: 73, type: 'BIZ' },
+                    { id: 74, type: 'BIZ' }, { id: 13, type: 'PVP' }
+                ],
+                M2: [
+                    { id: 75, type: 'BOSS' }, { id: 76, type: 'BOSS' }, { id: 38, type: 'WORK' }, { id: 75, type: 'BIZ' },
+                    { id: 76, type: 'BIZ' }
+                ],
+                M3: [
+                    { id: 77, type: 'BOSS' }, { id: 78, type: 'BOSS' }, { id: 39, type: 'WORK' }, { id: 77, type: 'BIZ' },
+                    { id: 78, type: 'BIZ' }
+                ]
+            },
+            N: {
+                N1: [
+                    { id: 79, type: 'BOSS' }, { id: 80, type: 'BOSS' }, { id: 79, type: 'BIZ' }, { id: 80, type: 'BIZ' },
+                    { id: 81, type: 'BIZ' }, { id: 14, type: 'PVP' }
+                ],
+                N2: [
+                    { id: 81, type: 'BOSS' }, { id: 82, type: 'BOSS' }, { id: 82, type: 'BIZ' }, { id: 83, type: 'BIZ' },
+                    { id: 84, type: 'BIZ' }
+                ],
+                N3: [
+                    { id: 83, type: 'BOSS' }, { id: 84, type: 'BOSS' }, { id: 85, type: 'BOSS' }, { id: 86, type: 'BOSS' },
+                    { id: 85, type: 'BIZ' }, { id: 86, type: 'BIZ' }
+                ]
+            },
+            O: {
+                O1: [{ id: 87, type: 'BOSS' }, { id: 88, type: 'BOSS' }],
+                O2: [{ id: 89, type: 'BOSS' }, { id: 90, type: 'BOSS' }],
+                O3: [{ id: 91, type: 'BOSS' }, { id: 92, type: 'BOSS' }]
+            },
+            $: {
+                $1: [
+                    { id: 93, type: 'BOSS' }, { id: 94, type: 'BOSS' }, { id: 95, type: 'BOSS' }, { id: 96, type: 'BOSS' },
+                    { id: 87, type: 'BIZ' }, { id: 88, type: 'BIZ' }
+                ],
+                $2: [
+                    { id: 97, type: 'BOSS' }, { id: 98, type: 'BOSS' }, { id: 99, type: 'BOSS' }, { id: 100, type: 'BOSS' },
+                    { id: 101, type: 'BOSS' }, { id: 102, type: 'BOSS' }, { id: 103, type: 'BOSS' }, { id: 89, type: 'BIZ' },
+                    { id: 90, type: 'BIZ' }
+                ],
+                $3: [
+                    { id: 104, type: 'BOSS' }, { id: 105, type: 'BOSS' }, { id: 106, type: 'BOSS' }, { id: 107, type: 'BOSS' },
+                    { id: 108, type: 'BOSS' }, { id: 91, type: 'BIZ' }, { id: 92, type: 'BIZ' }
+                ]
+            }
+        };
+
+        const BOSS_FLOOR_BY_ID = {};
+        for (const [sector, floors] of Object.entries(FLOORS_MAP)) {
+            for (const [floorCode, entries] of Object.entries(floors)) {
+                for (const entry of entries) {
+                    if (entry.type === 'BOSS') {
+                        const bossId = Number(entry.id);
+                        BOSS_FLOOR_BY_ID[bossId] = {
+                            floor: floorCode,
+                            sector: sector,
+                            floorName: sector === '$'
+                                ? `Специальный этаж $ (${floorCode})`
+                                : `Этаж ${sector}, часть ${floorCode.slice(1)} (${floorCode})`
+                        };
+                    }
+                }
+            }
+        }
+        let catalogIndex = new Map();
+        let catalogById = new Map();
+        let catalogByAsset = new Map();
+        let stashSetsById = new Map();
+        let allBossesData = [];
+        let autoRefreshInterval = null;
+        
+
+        document.getElementById('totalBossesCount').innerText = TOTAL_BOSSES;
+
+        function toWebp(rawPath) {
+            if (!rawPath) return '';
+            const clean = String(rawPath).trim();
+            if (!clean) return '';
+            if (/\.webp(\?.*)?$/i.test(clean)) return clean;
+            if (/\.(png|jpg|jpeg|gif|svg|avif)(\?.*)?$/i.test(clean)) {
+                return clean.replace(/\.(png|jpg|jpeg|gif|svg|avif)(\?.*)?$/i, '.webp$2');
+            }
+            return `${clean}.webp`;
+        }
+        function isPetDrop(drop) {
+            if (!drop || typeof drop !== 'object') return false;
+            if (drop.type === 'pet' || drop.type === 'pet_item') return true;
+
+            const rawId = drop.entityId ?? drop.id ?? drop.elementId ?? '';
+            const idStr = String(rawId).trim();
+            const entry = idStr !== ''
+                ? (catalogById.get(idStr) || catalogByAsset.get(idStr) || catalogIndex.get(idStr))
+                : null;
+
+            if (entry && Number(entry.categoryId) === 9) return true;
+            return false;
+        }
+
+
+        function indexCatalogItems(data, sourceName) {
+            const list = Array.isArray(data) ? data : (Array.isArray(data?.items) ? data.items : []);
+            for (const entry of list) {
+                if (!entry || typeof entry !== 'object') continue;
+                const keys = [entry.id, entry.elementId, entry.asset]
+                    .filter(v => v !== undefined && v !== null && String(v).trim() !== '')
+                    .map(v => String(v).trim());
+
+                const info = {
+                    source: sourceName,
+                    id: entry.id ?? null,
+                    elementId: entry.elementId ?? null,
+                    asset: entry.asset ? String(entry.asset).trim() : '',
+                    name: entry.name ? String(entry.name).trim() : '',
+                    categoryId: entry.categoryId ?? null,
+                    setLogo: entry.setLogo ? String(entry.setLogo).trim() : '',
+                    setId: entry.setId ?? null,
+                    zoneId: entry.zoneId ?? entry.zone ?? null
+                };
+
+                const idKey = entry.id !== undefined && entry.id !== null ? String(entry.id).trim() : '';
+                const assetKey = entry.asset ? String(entry.asset).trim() : '';
+
+                if (idKey && !catalogById.has(idKey)) {
+                    catalogById.set(idKey, info);
+                }
+                if (assetKey && !catalogByAsset.has(assetKey)) {
+                    catalogByAsset.set(assetKey, info);
+                }
+
+                for (const key of keys) {
+                    if (!catalogIndex.has(key)) {
+                        catalogIndex.set(key, info);
+                    }
+                }
+            }
+        }
+        function indexStashSets(data) {
+            const setsList = Array.isArray(data) ? data : (Array.isArray(data?.sets) ? data.sets : []);
+            for (const setObj of setsList) {
+                if (!setObj || typeof setObj !== 'object' || setObj.setId === undefined || setObj.setId === null) continue;
+                const setKey = String(setObj.setId).trim();
+                const ingredientsMap = new Map();
+
+                if (Array.isArray(setObj.ingredients)) {
+                    for (const ing of setObj.ingredients) {
+                        if (!ing || typeof ing !== 'object') continue;
+                        if (ing.ingredientId !== undefined && ing.ingredientId !== null) {
+                            ingredientsMap.set(String(ing.ingredientId).trim(), ing);
+                        }
+                    }
+                }
+
+                stashSetsById.set(setKey, {
+                    ...setObj,
+                    ingredientsMap
+                });
+            }
+        }
+
+        async function loadCatalogFiles() {
+            catalogById.clear();
+            catalogByAsset.clear();
+            catalogIndex.clear();
+            stashSetsById.clear();
+
+            await Promise.all(
+                EXTRA_DATA_FILES.map(async file => {
+                    try {
+                        const res = await fetch(`${file}?t=${Date.now()}`);
+                        if (res.ok) {
+                            const json = await res.json();
+                            if (file === 'sets.json' || Array.isArray(json?.sets)) {
+                                indexStashSets(json);
+                            } else {
+                                indexCatalogItems(json, file);
+                            }
+                            
+                        } else {
+                           
+                        }
+                    } catch (err) {
+                        
+                    }
+                })
+            );
+        }
+        function resolveDropWebpCandidates(drop) {
+            if (!drop || typeof drop !== 'object') return [];
+
+            const rawId = drop.entityId ?? drop.id ?? drop.elementId ?? '';
+            const idStr = String(rawId).trim();
+            const byIdEntry = idStr !== '' ? catalogById.get(idStr) : null;
+            const byAssetEntry = idStr !== '' ? catalogByAsset.get(idStr) : null;
+            const indexEntry = idStr !== '' ? catalogIndex.get(idStr) : null;
+            const entry = byIdEntry || byAssetEntry || indexEntry || null;
+
+            
+            
+            if (drop.type === 'weapon' || drop.type === 'weapon_item') {
+                return idStr ? [`data/items/category_1/${idStr}.webp`] : [];
+            }
+            
+            
+            if (drop.type === 'stash_ingredient') {
+                const setIdStr = drop.setId !== undefined && drop.setId !== null ? String(drop.setId).trim() : '';
+                const ingIdStr = drop.ingredientId !== undefined && drop.ingredientId !== null ? String(drop.ingredientId).trim() : '';
+                const setObj = setIdStr ? stashSetsById.get(setIdStr) : null;
+
+                if (setObj) {
+                    const ingObj = ingIdStr ? setObj.ingredientsMap.get(ingIdStr) : null;
+                    const rawUrl = ingObj?.imageUrl || setObj?.previewImageUrl || '';
+                    const resolvedUrl = toWebp(rawUrl);
+                    if (resolvedUrl) {
+                        return [resolvedUrl];
+                    }
+                }
+
+                return idStr ? [`data/stash/${idStr}.webp`] : [];
+            }
+
+            
+            if (drop.type === 'pet' || drop.type === 'pet_item') {
+                return idStr ? [`data/items/category_9/${idStr}.webp`] : [];
+            }
+
+            
+            if (drop.type === 'ornament') {
+                const setId = drop.setId ?? entry?.setId ?? '';
+                const zoneId = drop.zoneId ?? drop.zone ?? entry?.zoneId ?? '';
+                if (setId !== '' && zoneId !== '') {
+                    return [`data/ornament/set_${setId}_zone_${zoneId}.webp`];
+                }
+                return [];
+            }
+
+            
+            if (drop.type === 'clothing_item') {
+                const catId = entry?.categoryId ?? drop.categoryId;
+                const assetId = (entry?.asset || idStr).toString().trim();
+
+                if (catId && assetId) {
+                    return [`data/items/category_${catId}/${assetId}.webp`];
+                }
+                if (assetId) {
+                    const fallbackCats = [];
+                    for (let c = 2; c <= 8; c++) {
+                        fallbackCats.push(`data/items/category_${c}/${assetId}.webp`);
+                    }
+                    return fallbackCats;
+                }
+                return [];
+            }
+
+            
+            
+            if (drop.type === 'activity_item') {
+                return idStr ? [`data/activity_item/${idStr}.webp`] : [];
+            }
+
+            
+            if (drop.type === 'room') {
+                return idStr ? [`data/rooms/${idStr}.webp`] : [];
+            }
+
+            return [];
+        }
+        function ensureClickPreviewEl() {
+            let preview = document.getElementById('dropClickPreview');
+            if (!preview) {
+                preview = document.createElement('div');
+                preview.id = 'dropClickPreview';
+                preview.className = 'fixed z-50 hidden bg-cyber-card border-2 border-cyber-accent rounded-xl p-2.5 shadow-2xl select-none max-w-[94vw]';
+                preview.style.visibility = 'hidden';
+                preview.innerHTML = `
+                    <div
+                        id="dropClickPreviewFrame"
+                        style="background: linear-gradient(145deg, #2b090e 0%, #120406 100%);"
+                        class="w-80 h-80 rounded-lg border border-red-900/80 overflow-hidden flex items-center justify-center mx-auto"
+                    >
+                        <img id="dropClickPreviewImg" src="" alt="" class="w-full h-full object-contain p-2">
+                    </div>
+                    <div class="mt-2 flex flex-col items-center justify-center text-center gap-0.5">
+                        <div id="dropClickPreviewLabel" class="w-full font-mono text-xs text-cyber-accent font-bold text-center truncate"></div>
+                    </div>
+                `;
+                document.body.appendChild(preview);
+
+                preview.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    hideClickPreview();
+                });
+
+                document.addEventListener('click', (e) => {
+                    if (preview.classList.contains('hidden')) return;
+                    if (e.target.closest('#dropClickPreview') || e.target.closest('[data-zoom-trigger="1"]')) {
+                        return;
+                    }
+                    hideClickPreview();
+                });
+
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        hideClickPreview();
+                    }
+                });
+            }
+            return preview;
+        }
+
+        window.toggleClickZoom = function(event, triggerEl) {
+            if (event) event.stopPropagation();
+
+            const preview = ensureClickPreviewEl();
+            const frameEl = document.getElementById('dropClickPreviewFrame');
+            const imgEl = triggerEl.querySelector('img');
+            const label = triggerEl.dataset.label || '';
+            const src = imgEl ? (imgEl.currentSrc || imgEl.src) : '';
+            const isRect = triggerEl.dataset.zoomShape === 'rect';
+
+            if (!imgEl || !src || imgEl.style.display === 'none') {
+                hideClickPreview();
+                return;
+            }
+
+            const activeKey = `${isRect ? 'rect' : 'sq'}::${label}::${src}`;
+            if (!preview.classList.contains('hidden') && preview.dataset.activeKey === activeKey) {
+                hideClickPreview();
+                return;
+            }
+
+            if (isRect) {
+                frameEl.className = 'rounded-lg border border-red-900/80 overflow-hidden flex items-center justify-center mx-auto';
+                frameEl.style.background = 'linear-gradient(145deg, #2b090e 0%, #120406 100%)';
+                const rectW = Math.min(540, window.innerWidth - 48);
+                const rectH = Math.round(rectW * 0.56);
+                frameEl.style.width = `${rectW}px`;
+                frameEl.style.height = `${rectH}px`;
+            } else {
+                frameEl.className = 'rounded-lg border border-red-900/80 overflow-hidden flex items-center justify-center mx-auto';
+                frameEl.style.background = 'linear-gradient(145deg, #2b090e 0%, #120406 100%)';
+                const sqSize = Math.min(320, window.innerWidth - 48);
+                frameEl.style.width = `${sqSize}px`;
+                frameEl.style.height = `${sqSize}px`;
+            }
+
+            const previewImg = document.getElementById('dropClickPreviewImg');
+            const labelEl = document.getElementById('dropClickPreviewLabel');
+            previewImg.src = src;
+            previewImg.alt = label;
+            labelEl.textContent = label;
+            preview.dataset.activeKey = activeKey;
+
+            preview.style.visibility = 'hidden';
+            preview.style.left = '0px';
+            preview.style.top = '0px';
+            preview.classList.remove('hidden');
+
+            const rect = triggerEl.getBoundingClientRect();
+            const cursorX = (event && typeof event.clientX === 'number' && event.clientX > 0)
+                ? event.clientX
+                : rect.left + rect.width / 2;
+            const cursorY = (event && typeof event.clientY === 'number' && event.clientY > 0)
+                ? event.clientY
+                : rect.top + rect.height / 2;
+
+            requestAnimationFrame(() => {
+                const previewRect = preview.getBoundingClientRect();
+                const boxWidth = previewRect.width || (isRect ? 564 : 344);
+                const boxHeight = previewRect.height || (isRect ? 350 : 376);
+                const margin = 12;
+
+                let left = cursorX - boxWidth / 2;
+                left = Math.max(margin, Math.min(left, window.innerWidth - boxWidth - margin));
+
+                let top = cursorY - boxHeight / 2;
+                top = Math.max(margin, Math.min(top, window.innerHeight - boxHeight - margin));
+
+                preview.style.left = `${Math.round(left)}px`;
+                preview.style.top = `${Math.round(top)}px`;
+                preview.style.visibility = 'visible';
+            });
+        };
+        
+        window.hideClickPreview = function() {
+            const preview = document.getElementById('dropClickPreview');
+            if (preview) {
+                preview.classList.add('hidden');
+                preview.dataset.activeKey = '';
+            }
+        };
+
+        function formatMutagenShortName(rawName) {
+            const cleaned = String(rawName || '')
+                .replace(/(?:^|\s)мутаген[а-яіїєґa-z]*\s*/gi, ' ')
+                .replace(/\s+/g, ' ')
+                .trim();
+            return cleaned || 'MUT';
+        }
+        const categoryTitleClass = 'text-[11px] font-orbitron font-bold uppercase tracking-wider text-red-400 mb-1.5 text-center';
+        const darkGradStyle = 'background: linear-gradient(160deg, #1a0608 0%, #070709 65%);';
+        
+        function renderWebpSquare64(drop, fallbackLabel = 'ITEM', options = {}) {
+            const rawLabel = (drop.name || (drop.type === 'mutagen' ? 'МУТАГЕН' : fallbackLabel)).toString().trim();
+            const compactMutagen = Boolean(options.compactMutagen);
+            const compactClothing = Boolean(options.compactClothing);
+            const darkGradStyle = 'background: linear-gradient(145deg, #2b090e 0%, #120406 100%);';
+
+            if (drop.type === 'mutagen') {
+                const shortName = formatMutagenShortName(rawLabel);
+                const safeLabel = rawLabel.replace(/"/g, '&quot;');
+
+                const boxClass = compactMutagen
+                    ? 'w-11 h-11 shrink-0 rounded-md border-2 border-red-900/80 hover:border-red-500 overflow-hidden flex items-center justify-center p-0.5 cursor-pointer transition shadow-inner'
+                    : 'w-14 h-14 shrink-0 rounded-lg border-2 border-red-900/80 hover:border-red-500 overflow-hidden flex items-center justify-center p-0.5 cursor-pointer transition shadow-inner';
+
+                const len = shortName.length;
+                const textClass = compactMutagen
+                    ? (len <= 3 ? 'text-[12px]' : len <= 5 ? 'text-[10px]' : 'text-[8.5px]')
+                    : (len <= 3 ? 'text-[15px]' : len <= 5 ? 'text-[12px]' : 'text-[10px]');
+
+                return `
+                    <div
+                        data-zoom-trigger="1"
+                        data-label="${safeLabel}"
+                        onclick="toggleClickZoom(event, this)"
+                        style="${darkGradStyle}"
+                        class="${boxClass}"
+                    >
+                        <span class="w-full h-full text-red-200 font-mono font-black ${textClass} leading-none tracking-tight flex items-center justify-center text-center break-all select-none">
+                            ${shortName}
+                        </span>
+                    </div>
+                `;
+            }
+
+            const labelText = rawLabel;
+            const safeLabel = labelText.replace(/"/g, '&quot;');
+
+            if (drop.type === 'room') {
+                const rawId = drop.entityId ?? drop.id ?? drop.elementId ?? '';
+                const idStr = String(rawId).trim();
+                const candidates = resolveDropWebpCandidates(drop);
+                const firstSrc = candidates[0] || '';
+                const fallbacksAttr = JSON.stringify(candidates).replace(/"/g, '&quot;');
+                const roomLabel = labelText || `ROOM #${idStr}`;
+                const safeRoomLabel = roomLabel.replace(/"/g, '&quot;');
+
+                return `
+                    <div
+                        data-zoom-trigger="1"
+                        data-zoom-shape="rect"
+                        data-label="${safeRoomLabel}"
+                        onclick="toggleClickZoom(event, this)"
+                        style="${darkGradStyle}"
+                        class="w-full max-w-[128px] aspect-[16/10] shrink-0 rounded-lg border-2 border-red-900/80 hover:border-red-500 overflow-hidden flex items-center justify-center cursor-pointer transition"
+                    >
+                        ${firstSrc ? `
+                            <img
+                                src="${firstSrc}"
+                                data-fallbacks="${fallbacksAttr}"
+                                data-fallback-idx="0"
+                                alt="${safeRoomLabel}"
+                                onerror="handleImgFallback(this)"
+                                class="w-full h-full object-cover select-none"
+                            >
+                        ` : ''}
+                        <span style="${firstSrc ? 'display:none;' : 'display:flex;'}" class="w-full h-full text-red-200 font-mono text-[10px] font-bold items-center justify-center text-center p-1 leading-tight break-words">
+                            ${roomLabel}
+                        </span>
+                    </div>
+                `;
+            }
+
+            const candidates = resolveDropWebpCandidates(drop);
+            const firstSrc = candidates[0] || '';
+            const fallbacksAttr = JSON.stringify(candidates).replace(/"/g, '&quot;');
+            const sizeClass = compactClothing ? 'w-11 h-11' : 'w-14 h-14';
+
+            return `
+                <div
+                    data-zoom-trigger="1"
+                    data-label="${safeLabel}"
+                    onclick="toggleClickZoom(event, this)"
+                    style="${darkGradStyle}"
+                    class="${sizeClass} shrink-0 rounded-lg border-2 border-red-900/80 hover:border-red-500 overflow-hidden flex items-center justify-center cursor-pointer transition"
+                >
+                    ${firstSrc ? `
+                        <img
+                            src="${firstSrc}"
+                            data-fallbacks="${fallbacksAttr}"
+                            data-fallback-idx="0"
+                            alt="${safeLabel}"
+                            onerror="handleImgFallback(this)"
+                            class="w-full h-full object-contain p-0.5 select-none"
+                        >
+                    ` : ''}
+                    <span style="${firstSrc ? 'display:none;' : 'display:flex;'}" class="w-full h-full text-red-200 font-mono text-[10px] font-bold items-center justify-center text-center p-1 leading-tight break-words">
+                        ${labelText}
+                    </span>
+                </div>
+            `;
+        }
+
+        function renderOrnamentBodyBlock(ornaments) {
+            if (!Array.isArray(ornaments) || ornaments.length === 0) return '';
+
+            const zoneMap = new Map();
+            ornaments.forEach((o, idx) => {
+                const rawId = o.entityId ?? o.id ?? o.elementId ?? '';
+                const idStr = String(rawId).trim();
+                const entry = (idStr !== '' ? (catalogById.get(idStr) || catalogByAsset.get(idStr) || catalogIndex.get(idStr)) : null) || {};
+                const zoneId = String(o.zoneId ?? o.zone ?? entry.zoneId ?? '').trim();
+                const label = (o.name || entry.name || `Тату #${idStr || (idx + 1)}`).toString().trim();
+                const candidates = resolveDropWebpCandidates(o);
+                if (zoneId) {
+                    zoneMap.set(zoneId, {
+                        zoneId,
+                        label,
+                        candidates
+                    });
+                }
+            });
+
+            const matrixRows = [
+                ['11', '12'],
+                ['10'],
+                ['4', '9'],
+                ['3', '5', '8', '13'],
+                ['2', '6', '14'],
+                ['1', '7', '15']
+            ];
+
+            const rowsHtml = matrixRows
+                .map(row => {
+                    const activeInRow = row.filter(z => zoneMap.has(z));
+                    if (activeInRow.length === 0) return '';
+
+                    const cellsHtml = activeInRow.map(z => {
+                        const hit = zoneMap.get(z);
+                        const labelText = `${hit.label}`;
+                        const safeLabel = labelText.replace(/"/g, '&quot;');
+                        const candidates = (hit.candidates && hit.candidates.length > 0)
+                            ? hit.candidates
+                            : [`data/ornament/set_1_zone_${z}.webp`];
+                        const firstSrc = candidates[0] || '';
+                        const fallbacksAttr = JSON.stringify(candidates).replace(/"/g, '&quot;');
+
+                        return `
+                           <div
+                                data-zoom-trigger="1"
+                                data-label="${safeLabel}"
+                                onclick="toggleClickZoom(event, this)"
+                                title="${safeLabel}"
+                                style="background: linear-gradient(145deg, #2b090e 0%, #120406 100%);"
+                                class="w-7 h-7 rounded border border-red-500/80 shadow-[0_0_8px_rgba(239,68,68,0.45)] overflow-hidden flex items-center justify-center cursor-pointer transition select-none"
+                            >
+                                <img
+                                    src="${firstSrc}"
+                                    data-fallbacks="${fallbacksAttr}"
+                                    data-fallback-idx="0"
+                                    alt="${safeLabel}"
+                                    onerror="handleImgFallback(this)"
+                                    class="w-full h-full object-contain p-0.5 select-none"
+                                >
+                                <span style="display:none;" class="w-full h-full text-red-200 font-mono text-[9px] font-bold items-center justify-center text-center leading-none">
+                                    ${z}
+                                </span>
+                            </div>
+                        `;
+                    }).join('');
+
+                    return `<div class="flex items-center justify-center gap-1">${cellsHtml}</div>`;
+                })
+                .filter(Boolean)
+                .join('');
+
+            if (!rowsHtml) return '';
+
+            return `
+                <div class="flex flex-col items-center w-full">
+                    <div class="${categoryTitleClass}">Татуировки</div>
+                    <div class="flex flex-col items-center justify-center gap-1">
+                        ${rowsHtml}
+                    </div>
+                </div>
+            `;
+        }
+        
+        function isWeaponDrop(drop) {
+            if (!drop || typeof drop !== 'object') return false;
+            if (drop.type === 'weapon' || drop.type === 'weapon_item') return true;
+
+            const rawId = drop.entityId ?? drop.id ?? drop.elementId ?? '';
+            const idStr = String(rawId).trim();
+            const entry = idStr !== ''
+                ? (catalogById.get(idStr) || catalogByAsset.get(idStr) || catalogIndex.get(idStr))
+                : null;
+
+            if (entry && Number(entry.categoryId) === 1) return true;
+            return false;
+        }
+
+        function renderBossDropsLayout(drops) {
+    if (!Array.isArray(drops) || drops.length === 0) {
+        return `<div class="text-center text-xs font-mono text-gray-500">Нет дропов</div>`;
+    }
+
+    const mutagens = [];
+    const weapons = [];
+    const rooms = [];
+    const pets = [];
+    const items = [];
+    const clothingDrops = [];
+    const ornamentDrops = [];
+    const stashIngredients = [];
+
+    for (const drop of drops) {
+        if (!drop || typeof drop !== 'object') continue;
+        if (drop.type === 'mutagen') {
+            mutagens.push(drop);
+        } else if (drop.type === 'clothing_item') {
+            clothingDrops.push(drop);
+        } else if (drop.type === 'ornament') {
+            ornamentDrops.push(drop);
+        } else if (isWeaponDrop(drop)) {
+            weapons.push(drop);
+        } else if (drop.type === 'room') {
+            rooms.push(drop);
+        } else if (isPetDrop(drop)) {
+            pets.push(drop);
+        } else if (drop.type === 'stash_ingredient') {
+            stashIngredients.push(drop);
+        } else {
+            items.push(drop);
+        }
+    }
+
+    const sections = [];
+
+    const addGridSection = (title, list, renderFn, extraOpts = {}) => {
+        if (!list.length) return;
+        const colsCount = list.length > 1 ? 2 : 1;
+        const colsClass = colsCount === 2 ? 'grid-cols-2' : 'grid-cols-1';
+        const rowsCount = Math.ceil(list.length / colsCount);
+        const rowWeight = extraOpts.rowWeight || 3.4;
+        const weight = 1.4 + rowsCount * rowWeight;
+
+        sections.push({
+            weight,
+            html: `
+                <div class="flex flex-col items-center w-full min-w-0 max-w-full">
+                    <div class="${categoryTitleClass}">${title}</div>
+                    <div class="grid ${colsClass} gap-1.5 justify-items-center items-center w-full min-w-0">
+                        ${list.map(renderFn).join('')}
+                    </div>
+                </div>
+            `
+        });
+    };
+
+    const compactMutagen = mutagens.length > 5;
+    addGridSection('Мутагены', mutagens, m => renderWebpSquare64(m, 'МУТАГЕН', { compactMutagen }), {
+        rowWeight: compactMutagen ? 2.8 : 3.4
+    });
+    addGridSection('Оружие', weapons, w => renderWebpSquare64(w, 'WEAPON'));
+    addGridSection('Комната', rooms, r => renderWebpSquare64(r, 'ROOM'), { rowWeight: 4.2 });
+    addGridSection('Питомцы', pets, p => renderWebpSquare64(p, 'PET'));
+    addGridSection('Предмет', items, it => renderWebpSquare64(it, it.type || 'ITEM'));
+    addGridSection('Набор', stashIngredients, s => renderWebpSquare64(s, 'STASH'));
+
+    const compactClothing = clothingDrops.length > 1;
+    addGridSection('Одежда', clothingDrops, c => renderWebpSquare64(c, c.type || 'CLOTHING', { compactClothing }), {
+        rowWeight: compactClothing ? 2.8 : 3.4
+    });
+
+    const ornamentsSection = renderOrnamentBodyBlock(ornamentDrops);
+    if (ornamentsSection) {
+        const ornamentRows = Math.max(1, Math.ceil(ornamentDrops.length / 2));
+        sections.push({
+            weight: 1.4 + ornamentRows * 2.0,
+            html: ornamentsSection
+        });
+    }
+
+    if (!sections.length) return '';
+
+    const numCols = Math.min(3, sections.length);
+    const cols = Array.from({ length: numCols }, () => ({ weight: 0, parts: [] }));
+
+    
+    const sortedSections = [...sections].sort((a, b) => b.weight - a.weight);
+
+    for (const sec of sortedSections) {
+        let minCol = cols[0];
+        for (let i = 1; i < cols.length; i++) {
+            if (cols[i].weight < minCol.weight) {
+                minCol = cols[i];
+            }
+        }
+        minCol.parts.push(sec.html);
+        minCol.weight += sec.weight;
+    }
+
+    const activeCols = cols
+        .filter(c => c.parts.length > 0)
+        .map(c => c.parts.join('<div class="h-2"></div>'));
+
+    const gridColsClass = activeCols.length === 1
+        ? 'grid-cols-1'
+        : (activeCols.length === 2 ? 'grid-cols-2' : 'grid-cols-3');
+
+    return `
+        <div class="grid ${gridColsClass} gap-1.5 items-start w-full min-w-0">
+            ${activeCols.map(colHtml => `<div class="flex flex-col items-center justify-start min-w-0 max-w-full">${colHtml}</div>`).join('')}
+        </div>
+    `;
+}
+        
+        
+        
+        window.handleImgFallback = function(imgEl) {
+            try {
+                const list = JSON.parse(imgEl.dataset.fallbacks || '[]');
+                const nextIndex = Number(imgEl.dataset.fallbackIdx || '0') + 1;
+                if (nextIndex < list.length) {
+                    imgEl.dataset.fallbackIdx = String(nextIndex);
+                    imgEl.src = list[nextIndex];
+                    return;
+                }
+            } catch (_) {}
+            imgEl.onerror = null;
+            imgEl.style.display = 'none';
+            if (imgEl.nextElementSibling) {
+                imgEl.nextElementSibling.style.display = 'flex';
+            }
+        };
+
+        
+        async function loadBossesFiles() {
+            const grid = document.getElementById('bossesGrid');
+            try {
+                await loadCatalogFiles();
+                const promises = [];
+                for (let id = 1; id <= TOTAL_BOSSES; id++) {
+                    promises.push(
+                        fetch(`data/bosses/${id}.json`)
+                            .then(res => res.ok ? res.json() : null)
+                            .catch(() => null)
+                    );
+                }
+                const results = await Promise.all(promises);
+                allBossesData = results.filter(item => item !== null && typeof item === 'object');
+                populateFloorSelect();
+                renderBosses(allBossesData);
+            } catch (err) {
+                console.error('Ошибка загрузки боссов:', err);
+                grid.innerHTML = `<div class="col-span-full text-center py-10 text-red-400 font-mono">Ошибка загрузки данных из bosses/. Проверьте консоль (F12).</div>`;
+            }
+        }
+
+        function startBackgroundAutoRefresh() {
+            if (autoRefreshInterval) clearInterval(autoRefreshInterval);
+
+            autoRefreshInterval = setInterval(async () => {
+                try {
+                    await loadCatalogFiles();
+                    const promises = [];
+                    for (let id = 1; id <= TOTAL_BOSSES; id++) {
+                        promises.push(
+                            fetch(`bosses/${id}.json?t=${Date.now()}`)
+                                .then(res => res.ok ? res.json() : null)
+                                .catch(() => null)
+                        );
+                    }
+                    const freshList = await Promise.all(promises);
+                    const validFresh = freshList.filter(item => item !== null && typeof item === 'object');
+                    if (validFresh.length > 0) {
+                        allBossesData = validFresh;
+                        applyFilters();
+                    }
+                } catch (_) {}
+            }, 7000);
+        }
+
+        function populateFloorSelect() {
+            const select = document.getElementById('floorFilter');
+            if (!select || select.children.length > 1) return;
+
+            for (const [sector, floors] of Object.entries(FLOORS_MAP)) {
+                for (const floorCode of Object.keys(floors)) {
+                    const option = document.createElement('option');
+                    option.value = floorCode;
+                    option.textContent = sector === '$'
+                        ? `Специальный этаж $ (${floorCode})`
+                        : `Этаж ${sector}, часть ${floorCode.slice(1)} (${floorCode})`;
+                    select.appendChild(option);
+                }
+            }
+        }
+
+        function getFloorAndPart(id) {
+            return BOSS_FLOOR_BY_ID[Number(id)] || {
+                floor: '?',
+                sector: '?',
+                floorName: 'Этаж не найден по ID'
+            };
+        }
+
+        function getFloorNeonStyle(floorStr) {
+            const letter = floorStr.charAt(0);
+            const data = {
+                'A': { color: '#00f0ff', shadow: 'rgba(0,240,255,0.25)' },
+                'B': { color: '#00ff66', shadow: 'rgba(0,255,102,0.25)' },
+                'C': { color: '#ffe600', shadow: 'rgba(255,230,0,0.25)' },
+                'D': { color: '#7000ff', shadow: 'rgba(112,0,255,0.25)' },
+                'E': { color: '#ff0055', shadow: 'rgba(255,0,85,0.25)' },
+                'F': { color: '#2dd4bf', shadow: 'rgba(45,212,191,0.25)' },
+                'G': { color: '#fbbf24', shadow: 'rgba(251,191,36,0.25)' },
+                'H': { color: '#818cf8', shadow: 'rgba(129,140,248,0.25)' },
+                'I': { color: '#fb7185', shadow: 'rgba(251,113,133,0.25)' },
+                'J': { color: '#34d399', shadow: 'rgba(52,211,153,0.25)' },
+                'K': { color: '#67e8f9', shadow: 'rgba(103,232,249,0.25)' },
+                'L': { color: '#e879f9', shadow: 'rgba(232,121,249,0.25)' },
+                'M': { color: '#a3e635', shadow: 'rgba(163,230,53,0.25)' },
+                'N': { color: '#fb923c', shadow: 'rgba(251,146,60,0.25)' },
+                'O': { color: '#a78bfa', shadow: 'rgba(167,139,250,0.25)' },
+                '$': { color: '#fde047', shadow: 'rgba(253,224,71,0.3)' }
+            };
+            return data[letter] || { color: '#00f0ff', shadow: 'rgba(0,240,255,0.25)' };
+        }
+
+        function getBossTitleFontClass(name) {
+            const len = (name || '').trim().length;
+            if (len > 36) return 'text-xs sm:text-sm leading-tight';
+            if (len > 24) return 'text-sm sm:text-base leading-tight';
+            if (len > 14) return 'text-base sm:text-lg leading-tight';
+            return 'text-lg sm:text-xl leading-tight';
+        }
+
+        function renderBosses(bosses) {
+            const grid = document.getElementById('bossesGrid');
+            document.getElementById('bossCountDisplay').innerText = bosses.length;
+
+            if (!bosses || bosses.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-10 text-red-400 font-mono">Боссы по заданным критериям не найдены (или файлы bosses/*.json ещё не добавлены).</div>`;
+                return;
+            }
+
+            grid.innerHTML = bosses.map(b => {
+                const drops = b.possibleDrops || [];
+                const floorInfo = getFloorAndPart(b.id);
+                const floorStyle = getFloorNeonStyle(floorInfo.floor);
+                const cardStyleAttr = 'border-color: #7f1d1d; box-shadow: 0 0 18px rgba(185, 28, 28, 0.25);';
+
+                const dropsSquaresHtml = renderBossDropsLayout(drops);
+
+                const rewards = b.rewardPreview || {};
+                const rewardsArray = [];
+                if (rewards.gold) rewardsArray.push(`<span>+${rewards.gold.toLocaleString()} 🪙</span>`);
+                if (rewards.exp) rewardsArray.push(`<span>+${rewards.exp.toLocaleString()} ✨</span>`);
+                if (rewards.dollar) rewardsArray.push(`<span>+${rewards.dollar.toLocaleString()} 💵</span>`);
+                if (rewards.pills) rewardsArray.push(`<span>+${rewards.pills.toLocaleString()} 💊</span>`);
+                const rewardsHtml = rewardsArray.length > 0 ? rewardsArray.join(' &nbsp; ') : '<span class="text-gray-500">Нет</span>';
+
+                const topKillerObj = b.topKiller;
+                let topKillerText = '-';
+                if (topKillerObj) {
+                    const kills = topKillerObj.killCount !== undefined ? ` (${topKillerObj.killCount.toLocaleString()})` : '';
+                    topKillerText = (topKillerObj.nickname && topKillerObj.nickname !== 'null')
+                        ? `${topKillerObj.nickname}${kills}`
+                        : `ID: ${topKillerObj.userId}${kills}`;
+                }
+
+                const fightDurationMinutes = b.maxFightDurationSeconds ? Math.round(b.maxFightDurationSeconds / 60) : 60;
+                const bossTitle = b.nameRu || 'Неизвестный босс';
+                const bossTitleFontClass = getBossTitleFontClass(bossTitle);
+                const bossImgCandidates = JSON.stringify([
+                    `data/bosses_prew/P${b.id}.webp`,
+                ]).replace(/"/g, '&quot;');
+
+                return `
+                    <div class="boss-card relative overflow-hidden bg-cyber-card border-2 rounded-xl p-4 shadow-xl transition flex flex-col justify-between space-y-3" style="${cardStyleAttr}">
+
+                        <div class="relative z-10 flex flex-col justify-between space-y-3">
+                            
+                            <div class="flex flex-col items-center text-center border-b border-cyber-border pb-3 gap-2.5">
+                                <h2 class="boss-title-clamp font-orbitron font-extrabold text-red-500 uppercase tracking-wide ${bossTitleFontClass}">
+                                    ${bossTitle}
+                                </h2>
+
+                                <div class="flex items-center justify-center gap-3 w-full">
+                                    <div
+                                        data-zoom-trigger="1"
+                                        data-label="${bossTitle.replace(/"/g, '&quot;')}"
+                                        onclick="toggleClickZoom(event, this)"
+                                        style="background: linear-gradient(145deg, #2b090e 0%, #120406 100%);"
+                                        class="w-32 h-32 shrink-0 rounded-xl border-2 border-red-900/80 hover:border-cyber-accent overflow-hidden flex items-center justify-center cursor-pointer transition"
+                                    >
+                                        <img
+                                            src="data/bosses_prew/P${b.id}.webp"
+                                            data-fallbacks="${bossImgCandidates}"
+                                            data-fallback-idx="0"
+                                            alt="${bossTitle}"
+                                            onerror="handleImgFallback(this)"
+                                            class="w-full h-full object-contain p-1 select-none"
+                                        >
+                                        <span style="display:none;" class="w-full h-full text-red-200 font-mono text-xs font-bold items-center justify-center text-center p-2">
+                                            BOSS #${b.id}
+                                        </span>
+                                    </div>
+
+                                    
+                                    <div class="text-left text-xs font-mono bg-[#09090c] p-2.5 rounded-lg border border-red-950/90 space-y-1 min-w-0 flex-1">
+                                        <div class="truncate"><span class="text-zinc-400">ID:</span> <span class="text-purple-400 font-bold">#${b.id}</span></div>
+                                        <div class="truncate"><span class="text-zinc-400">Этаж:</span> <span class="text-red-400 font-bold">${floorInfo.floor}</span></div>
+                                        <div class="truncate"><span class="text-zinc-400">HP:</span> <span class="text-red-500 font-bold">${b.maxHp ? b.maxHp.toLocaleString() : 0} ❤️</span></div>
+                                        <div class="truncate"><span class="text-zinc-400">Уровень:</span> <span class="text-sky-400 font-bold">${b.requiredLevel} – ${b.rewardUntilLevel}</span></div>
+                                        <div class="truncate"><span class="text-zinc-400">Урон:</span> <span class="text-orange-400 font-bold">${b.damageMin} - ${b.damageMax}</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="text-xs font-mono bg-[#090405] p-2.5 rounded-lg border border-[#3b1116] space-y-2">
+                                <div class="grid grid-cols-2 gap-2">
+                                    <div class="truncate"><span class="text-red-300/70">Время:</span> <span class="text-red-100 font-bold">${fightDurationMinutes} мин</span></div>
+                                    <div class="truncate"><span class="text-red-300/70">Участников:</span> <span class="text-red-100 font-bold">до ${b.maxParticipants || 50}</span></div>
+                                </div>
+
+                                <div class="pt-2 border-t border-[#3b1116]/80 flex items-center justify-between gap-2">
+                                    <span class="text-red-300/70 shrink-0">Топ:</span>
+                                    <b class="text-red-200 font-bold truncate max-w-[210px]">${topKillerText}</b>
+                                </div>
+
+                                <div class="bg-[#14080a] border border-red-700/70 rounded-md px-2.5 py-2 flex items-center justify-between gap-2 shadow-[0_0_10px_rgba(220,38,38,0.18)]">
+                                    <span class="text-[11px] font-orbitron font-bold uppercase tracking-wider text-red-400 shrink-0">Награды:</span>
+                                    <div class="text-xs font-mono text-red-100 font-bold flex flex-wrap justify-end items-center gap-2">${rewardsHtml}</div>
+                                </div>
+                            </div>
+
+                            
+
+                           
+                            <div class="mt-1 space-y-2">
+                                
+                                ${dropsSquaresHtml}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function applyFilters() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const selectedFloor = document.getElementById('floorFilter').value;
+            const playerLevel = parseInt(document.getElementById('playerLevelInput').value);
+
+            const needGold = document.getElementById('filterGold').checked;
+            const needPills = document.getElementById('filterPills').checked;
+            const needClothing = document.getElementById('filterClothing').checked;
+            const needOrnaments = document.getElementById('filterOrnaments').checked;
+            const needWeapons = document.getElementById('filterWeapons').checked;
+            const needPets = document.getElementById('filterPets').checked;
+            const needRooms = document.getElementById('filterRooms').checked;
+            const needSets = document.getElementById('filterSets').checked;
+
+            const filtered = allBossesData.filter(b => {
+                const floorInfo = getFloorAndPart(b.id);
+
+                const matchesSearch = (b.nameRu && b.nameRu.toLowerCase().includes(query)) ||
+                    b.id.toString().includes(query) ||
+                    floorInfo.floor.toLowerCase().includes(query);
+                if (!matchesSearch) return false;
+
+                if (selectedFloor && floorInfo.floor !== selectedFloor) return false;
+
+                if (!isNaN(playerLevel)) {
+                    const minLvl = b.requiredLevel || 0;
+                    const maxLvl = b.rewardUntilLevel || 999;
+                    if (playerLevel < minLvl || playerLevel > maxLvl) return false;
+                }
+
+                const drops = b.possibleDrops || [];
+                const rewards = b.rewardPreview || {};
+
+                if (needGold && (!rewards.gold || rewards.gold <= 0)) return false;
+                if (needPills && (!rewards.pills || rewards.pills <= 0)) return false;
+                if (needClothing && !drops.some(d => d.type === 'clothing_item')) return false;
+                if (needOrnaments && !drops.some(d => d.type === 'ornament')) return false;
+                if (needWeapons && !drops.some(d => d.type === 'weapon' || d.type === 'weapon_item')) return false;
+                if (needPets && !drops.some(d => d.type === 'pet' || d.type === 'pet_item')) return false;
+                if (needRooms && !drops.some(d => d.type === 'room')) return false;
+                if (needSets && !drops.some(d => d.type === 'stash_ingredient')) return false;
+
+                return true;
+            });
+
+            renderBosses(filtered);
+        }
+        function resetFilters() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('floorFilter').value = '';
+            document.getElementById('playerLevelInput').value = '';
+            document.getElementById('filterGold').checked = false;
+            document.getElementById('filterPills').checked = false;
+            document.getElementById('filterClothing').checked = false;
+            document.getElementById('filterOrnaments').checked = false;
+            document.getElementById('filterWeapons').checked = false;
+            document.getElementById('filterPets').checked = false;
+            document.getElementById('filterRooms').checked = false;
+            document.getElementById('filterSets').checked = false;
+            renderBosses(allBossesData);
+        }
+
+        loadBossesFiles()
+    </script>
+</body>
+</html>

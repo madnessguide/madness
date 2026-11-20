@@ -1,0 +1,4255 @@
+{
+    "sets": [
+        {
+            "setId": 1,
+            "title": "Набор «Линзовщик»",
+            "description": "Этаж: A",
+            "previewImageUrl": "data/stash/A/1_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/A/1_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 2
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/A/1_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 2
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/A/1_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 2
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/A/1_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 2
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/A/1_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 2
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 300,
+                "wallet": {
+                    "gold": 600,
+                    "dollar": 0,
+                    "pills": 200
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 26
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 6
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 1
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 1,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 2,
+            "title": "Набор «Полевой лазарет»",
+            "description": "Этаж: A",
+            "previewImageUrl": "data/stash/A/2_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/A/2_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 4
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/A/2_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 4
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/A/2_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 4
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/A/2_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 4
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/A/2_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 4
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 600,
+                "wallet": {
+                    "gold": 1200,
+                    "dollar": 0,
+                    "pills": 400
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 26
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 6
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 1
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 2,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 3,
+            "title": "Набор «Лоскутница»",
+            "description": "Этаж: A",
+            "previewImageUrl": "data/stash/A/3_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/A/3_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 4
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/A/3_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 4
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/A/3_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 4
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/A/3_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 4
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/A/3_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 4
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 600,
+                "wallet": {
+                    "gold": 1200,
+                    "dollar": 0,
+                    "pills": 400
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 26
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 6
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 1
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 3,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 4,
+            "title": "Набор «Чудодур»",
+            "description": "Этаж: B",
+            "previewImageUrl": "data/stash/B/1_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/B/1_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 5
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/B/1_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 5
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/B/1_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 5
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/B/1_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 5
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/B/1_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 5
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 750,
+                "wallet": {
+                    "gold": 1500,
+                    "dollar": 0,
+                    "pills": 500
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 55
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 12
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 2
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 4,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 5,
+            "title": "Набор «Разделочник»",
+            "description": "Этаж: B",
+            "previewImageUrl": "data/stash/B/2_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/B/2_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 5
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/B/2_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 5
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/B/2_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 5
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/B/2_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 5
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/B/2_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 5
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 750,
+                "wallet": {
+                    "gold": 1500,
+                    "dollar": 0,
+                    "pills": 500
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 55
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 12
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 2
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 5,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 6,
+            "title": "Набор «Кабинет анатома»",
+            "description": "Этаж: B",
+            "previewImageUrl": "data/stash/B/3_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/B/3_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 5
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/B/3_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 5
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/B/3_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 5
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/B/3_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 5
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/B/3_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 5
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 750,
+                "wallet": {
+                    "gold": 1500,
+                    "dollar": 0,
+                    "pills": 500
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 55
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 12
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 2
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 6,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 7,
+            "title": "Набор «Ископаемый ящер»",
+            "description": "Этаж: C",
+            "previewImageUrl": "data/stash/C/1_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/C/1_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 7
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/C/1_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 7
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/C/1_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 7
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/C/1_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 7
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/C/1_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 7
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 1050,
+                "wallet": {
+                    "gold": 2100,
+                    "dollar": 0,
+                    "pills": 700
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 105
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 22
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 4
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 7,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 8,
+            "title": "Набор «Коробка забав»",
+            "description": "Этаж: C",
+            "previewImageUrl": "data/stash/C/2_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/C/2_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 7
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/C/2_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 7
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/C/2_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 7
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/C/2_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 7
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/C/2_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 7
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 1050,
+                "wallet": {
+                    "gold": 2100,
+                    "dollar": 0,
+                    "pills": 700
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 105
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 22
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 4
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 8,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 9,
+            "title": "Набор «Альбом набросков»",
+            "description": "Этаж: C",
+            "previewImageUrl": "data/stash/C/3_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/C/3_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 7
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/C/3_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 7
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/C/3_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 7
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/C/3_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 7
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/C/3_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 7
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 1050,
+                "wallet": {
+                    "gold": 2100,
+                    "dollar": 0,
+                    "pills": 700
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 105
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 22
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 4
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 9,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 10,
+            "title": "Набор «Карточная башня»",
+            "description": "Этаж: D",
+            "previewImageUrl": "data/stash/D/1_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/D/1_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 11
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/D/1_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 11
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/D/1_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 11
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/D/1_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 11
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/D/1_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 11
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 1650,
+                "wallet": {
+                    "gold": 3300,
+                    "dollar": 0,
+                    "pills": 1100
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 200
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 40
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 6
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 10,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 11,
+            "title": "Набор «Бумажная аппликация»",
+            "description": "Этаж: D",
+            "previewImageUrl": "data/stash/D/2_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/D/2_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 11
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/D/2_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 11
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/D/2_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 11
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/D/2_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 11
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/D/2_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 11
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 1650,
+                "wallet": {
+                    "gold": 3300,
+                    "dollar": 0,
+                    "pills": 1100
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 200
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 40
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 6
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 11,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 12,
+            "title": "Набор «Лаборант-алхимик»",
+            "description": "Этаж: D",
+            "previewImageUrl": "data/stash/D/3_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/D/3_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 11
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/D/3_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 11
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/D/3_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 11
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/D/3_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 11
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/D/3_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 11
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 1650,
+                "wallet": {
+                    "gold": 3300,
+                    "dollar": 0,
+                    "pills": 1100
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 200
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 40
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 6
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 12,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 13,
+            "title": "Набор «Шипастый саркофаг»",
+            "description": "Этаж: E",
+            "previewImageUrl": "data/stash/E/1_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/E/1_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 17
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/E/1_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 17
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/E/1_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 17
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/E/1_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 17
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/E/1_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 17
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 2550,
+                "wallet": {
+                    "gold": 5100,
+                    "dollar": 0,
+                    "pills": 1700
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 440
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 85
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 11
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 13,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 14,
+            "title": "Набор «Железный лик»",
+            "description": "Этаж: E",
+            "previewImageUrl": "data/stash/E/2_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/E/2_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 17
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/E/2_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 17
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/E/2_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 17
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/E/2_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 17
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/E/2_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 17
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 2550,
+                "wallet": {
+                    "gold": 5100,
+                    "dollar": 0,
+                    "pills": 1700
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 440
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 85
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 11
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 14,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 15,
+            "title": "Набор «Техночереп»",
+            "description": "Этаж: E",
+            "previewImageUrl": "data/stash/E/3_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/E/3_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 17
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/E/3_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 17
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/E/3_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 17
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/E/3_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 17
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/E/3_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 17
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 2550,
+                "wallet": {
+                    "gold": 5100,
+                    "dollar": 0,
+                    "pills": 1700
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 440
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 85
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 11
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 15,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 16,
+            "title": "Набор «Тёмный обряд»",
+            "description": "Этаж: F",
+            "previewImageUrl": "data/stash/F/1_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/F/1_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/F/1_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/F/1_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/F/1_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/F/1_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 625
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 115
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 14
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 16,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 17,
+            "title": "Набор «Книга запретных шепотов»",
+            "description": "Этаж: F",
+            "previewImageUrl": "data/stash/F/2_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/F/2_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/F/2_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/F/2_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/F/2_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/F/2_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 625
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 115
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 14
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 17,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 18,
+            "title": "Набор «Свечной алтарь»",
+            "description": "Этаж: F",
+            "previewImageUrl": "data/stash/F/3_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/F/3_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/F/3_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/F/3_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/F/3_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/F/3_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 625
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 115
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 14
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 18,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 19,
+            "title": "Набор «Низкострун»",
+            "description": "Этаж: G",
+            "previewImageUrl": "data/stash/G/1_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/G/1_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 12
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/G/1_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 12
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/G/1_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 12
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/G/1_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 12
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/G/1_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 12
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 1800,
+                "wallet": {
+                    "gold": 3600,
+                    "dollar": 0,
+                    "pills": 1200
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 245
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 49
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 7
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 19,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 20,
+            "title": "Набор «Падающее лезвие»",
+            "description": "Этаж: G",
+            "previewImageUrl": "data/stash/G/2_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/G/2_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 12
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/G/2_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 12
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/G/2_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 12
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/G/2_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 12
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/G/2_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 12
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 1800,
+                "wallet": {
+                    "gold": 3600,
+                    "dollar": 0,
+                    "pills": 1200
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 245
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 49
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 7
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 20,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 21,
+            "title": "Набор «Арсенал гадалки»",
+            "description": "Этаж: G",
+            "previewImageUrl": "data/stash/G/3_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/G/3_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 12
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/G/3_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 12
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/G/3_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 12
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/G/3_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 12
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/G/3_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 12
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 1800,
+                "wallet": {
+                    "gold": 3600,
+                    "dollar": 0,
+                    "pills": 1200
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 245
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 49
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 7
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 21,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 22,
+            "title": "Набор «Магическая бутылка»",
+            "description": "Этаж: H",
+            "previewImageUrl": "data/stash/H/1_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/H/1_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 16
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/H/1_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 16
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/H/1_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 16
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/H/1_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 16
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/H/1_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 16
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 2400,
+                "wallet": {
+                    "gold": 4800,
+                    "dollar": 0,
+                    "pills": 1600
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 395
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 75
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 10
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 22,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 23,
+            "title": "Набор «Карманный фрегат»",
+            "description": "Этаж: H",
+            "previewImageUrl": "data/stash/H/2_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/H/2_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 16
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/H/2_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 16
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/H/2_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 16
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/H/2_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 16
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/H/2_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 16
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 2400,
+                "wallet": {
+                    "gold": 4800,
+                    "dollar": 0,
+                    "pills": 1600
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 395
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 75
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 10
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 23,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 24,
+            "title": "Набор «Лагерь истязателя»",
+            "description": "Этаж: H",
+            "previewImageUrl": "data/stash/H/3_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/H/3_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 16
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/H/3_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 16
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/H/3_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 16
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/H/3_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 16
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/H/3_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 16
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 2400,
+                "wallet": {
+                    "gold": 4800,
+                    "dollar": 0,
+                    "pills": 1600
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 395
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 75
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 10
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 24,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 25,
+            "title": "Набор «Сушёные травы»",
+            "description": "Этаж: I",
+            "previewImageUrl": "data/stash/I/1_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/I/1_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/I/1_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/I/1_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/I/1_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/I/1_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 1000
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 180
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 19
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 25,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 26,
+            "title": "Набор «Ведьмин настой»",
+            "description": "Этаж: I",
+            "previewImageUrl": "data/stash/I/2_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/I/2_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/I/2_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/I/2_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/I/2_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/I/2_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 1000
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 180
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 19
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 26,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 27,
+            "title": "Набор «Клетка чудищ»",
+            "description": "Этаж: I",
+            "previewImageUrl": "data/stash/I/3_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/I/3_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/I/3_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/I/3_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/I/3_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/I/3_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 1000
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 180
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 19
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 27,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 28,
+            "title": "Набор «Гранёный эликсир»",
+            "description": "Этаж: J",
+            "previewImageUrl": "data/stash/J/1_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/J/1_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/J/1_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/J/1_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/J/1_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/J/1_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 1650
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 285
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 27
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 28,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 29,
+            "title": "Набор «Галерея черепов»",
+            "description": "Этаж: J",
+            "previewImageUrl": "data/stash/J/2_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/J/2_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/J/2_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/J/2_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/J/2_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/J/2_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 1650
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 285
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 27
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 29,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 30,
+            "title": "Набор «Керосинка»",
+            "description": "Этаж: J",
+            "previewImageUrl": "data/stash/J/3_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/J/3_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/J/3_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/J/3_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/J/3_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/J/3_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 1650
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 285
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 27
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 30,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 31,
+            "title": "Набор «Лучемёт»",
+            "description": "Этаж: K",
+            "previewImageUrl": "data/stash/K/1_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/K/1_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/K/1_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/K/1_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/K/1_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/K/1_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 2825
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 450
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 38
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 31,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 32,
+            "title": "Набор «Ночное око»",
+            "description": "Этаж: K",
+            "previewImageUrl": "data/stash/K/2_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/K/2_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/K/2_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/K/2_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/K/2_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/K/2_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 2825
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 450
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 38
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 32,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 33,
+            "title": "Набор «Счётная машина»",
+            "description": "Этаж: K",
+            "previewImageUrl": "data/stash/K/3_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/K/3_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/K/3_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/K/3_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/K/3_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/K/3_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 2825
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 450
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 38
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 33,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 34,
+            "title": "Набор «Плёночная камера»",
+            "description": "Этаж: L",
+            "previewImageUrl": "data/stash/L/1_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/L/1_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/L/1_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/L/1_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/L/1_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/L/1_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 8200
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 1125
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 75
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 34,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 35,
+            "title": "Набор «Счётчик фона»",
+            "description": "Этаж: L",
+            "previewImageUrl": "data/stash/L/2_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/L/2_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/L/2_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/L/2_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/L/2_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/L/2_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 8200
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 1125
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 75
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 35,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 36,
+            "title": "Набор «Фотоателье»",
+            "description": "Этаж: L",
+            "previewImageUrl": "data/stash/L/3_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/L/3_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/L/3_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/L/3_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/L/3_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/L/3_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 8200
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 1125
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 75
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 36,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 37,
+            "title": "Набор «Адская машинка»",
+            "description": "Этаж: M",
+            "previewImageUrl": "data/stash/M/1_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/M/1_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/M/1_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/M/1_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/M/1_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/M/1_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 31100
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 3475
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 180
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 37,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 38,
+            "title": "Набор «Позолоченный запор»",
+            "description": "Этаж: M",
+            "previewImageUrl": "data/stash/M/2_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/M/2_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/M/2_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/M/2_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/M/2_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/M/2_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 31100
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 3475
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 180
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 38,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 39,
+            "title": "Набор «Шкатулка бедствий»",
+            "description": "Этаж: M",
+            "previewImageUrl": "data/stash/M/3_1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/M/3_2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/M/3_3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/M/3_4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/M/3_5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/M/3_6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 31100
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 3475
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 180
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 39,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 40,
+            "title": "Набор «Древковый клинок»",
+            "description": "Этаж: $",
+            "previewImageUrl": "data/stash/S/1/1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/S/1/2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/S/1/3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/S/1/4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/S/1/5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/S/1/6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 1300
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 230
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 23
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 40,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 41,
+            "title": "Набор «Лесной хищник»",
+            "description": "Этаж: $",
+            "previewImageUrl": "data/stash/S/2/1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/S/2/2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/S/2/3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/S/2/4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/S/2/5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/S/2/6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 1300
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 230
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 23
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 41,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 42,
+            "title": "Набор «Башенный звонарь»",
+            "description": "Этаж: $",
+            "previewImageUrl": "data/stash/S/3/1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/S/3/2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/S/3/3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/S/3/4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/S/3/5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/S/3/6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 1300
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 230
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 23
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 42,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 43,
+            "title": "Набор «Остриё»",
+            "description": "Этаж: $",
+            "previewImageUrl": "data/stash/S/4/1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/S/4/2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/S/4/3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/S/4/4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/S/4/5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/S/4/6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 1300
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 230
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 23
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 43,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 44,
+            "title": "Набор «Пустынная змея»",
+            "description": "Этаж: $",
+            "previewImageUrl": "data/stash/S/5/1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/S/5/2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/S/5/3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/S/5/4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/S/5/5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/S/5/6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 1300
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 230
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 23
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 44,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 45,
+            "title": "Набор «Изумрудный зверь»",
+            "description": "Этаж: $",
+            "previewImageUrl": "data/stash/S/6/1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/S/6/2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/S/6/3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/S/6/4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/S/6/5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/S/6/6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 1300
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 230
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 23
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 45,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 46,
+            "title": "Набор «Косолапый»",
+            "description": "Этаж: $",
+            "previewImageUrl": "data/stash/S/7/1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/S/7/2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/S/7/3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/S/7/4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/S/7/5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/S/7/6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 1300
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 230
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 23
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 46,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 47,
+            "title": "Набор «Дубина вожака»",
+            "description": "Этаж: $",
+            "previewImageUrl": "data/stash/S/8/1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/S/8/2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/S/8/3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/S/8/4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/S/8/5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/S/8/6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 1300
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 230
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 23
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 47,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 48,
+            "title": "Набор «Шипастая булава»",
+            "description": "Этаж: $",
+            "previewImageUrl": "data/stash/S/9/1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/S/9/2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/S/9/3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/S/9/4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/S/9/5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/S/9/6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 1300
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 230
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 23
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 48,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 49,
+            "title": "Набор «Зубчатый меч»",
+            "description": "Этаж: $",
+            "previewImageUrl": "data/stash/S/10/1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/S/10/2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/S/10/3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/S/10/4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/S/10/5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/S/10/6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 1300
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 230
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 23
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 49,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 50,
+            "title": "Набор «Костедробитель»",
+            "description": "Этаж: $",
+            "previewImageUrl": "data/stash/S/11/1.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/S/11/2.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/S/11/3.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/S/11/4.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/S/11/5.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/S/11/6.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 20
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 3000,
+                "wallet": {
+                    "gold": 6000,
+                    "dollar": 0,
+                    "pills": 2000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 1300
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 230
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 23
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 50,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 51,
+            "title": "Набор «Кузнечный каркас»",
+            "description": "Составная серия",
+            "previewImageUrl": "data/stash/composite/51/preview.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/composite/51001.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 60
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/composite/51002.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 60
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/composite/51003.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 60
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/composite/51004.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 60
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/composite/51005.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 60
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 9000,
+                "wallet": {
+                    "gold": 18000,
+                    "dollar": 0,
+                    "pills": 6000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 11900
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 1375
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 75
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 51,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 52,
+            "title": "Набор «Оправа реликвии»",
+            "description": "Составная серия",
+            "previewImageUrl": "data/stash/composite/52/preview.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/composite/52001.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 60
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/composite/52002.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 60
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/composite/52003.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 60
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/composite/52004.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 60
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/composite/52005.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 60
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 9000,
+                "wallet": {
+                    "gold": 18000,
+                    "dollar": 0,
+                    "pills": 6000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 11900
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 1375
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 75
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 52,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 53,
+            "title": "Набор «Осколок бастиона»",
+            "description": "Составная серия",
+            "previewImageUrl": "data/stash/composite/53/preview.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/composite/53001.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 60
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/composite/53002.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 60
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/composite/53003.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 60
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/composite/53004.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 60
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/composite/53005.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 60
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 9000,
+                "wallet": {
+                    "gold": 18000,
+                    "dollar": 0,
+                    "pills": 6000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 11900
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 1375
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 75
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 53,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 54,
+            "title": "Набор «Легендарный сегмент»",
+            "description": "Составная серия",
+            "previewImageUrl": "data/stash/composite/54/preview.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/composite/54001.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 60
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/composite/54002.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 60
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/composite/54003.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 60
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/composite/54004.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 60
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/composite/54005.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 60
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 9000,
+                "wallet": {
+                    "gold": 18000,
+                    "dollar": 0,
+                    "pills": 6000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 11900
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 1375
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 75
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 54,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 55,
+            "title": "Набор «Самоцветный узел»",
+            "description": "Составная серия",
+            "previewImageUrl": "data/stash/composite/55/preview.webp",
+            "ingredients": [
+                {
+                    "ingredientId": 1,
+                    "imageUrl": "data/stash/composite/55001.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 60
+                    }
+                },
+                {
+                    "ingredientId": 2,
+                    "imageUrl": "data/stash/composite/55002.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 60
+                    }
+                },
+                {
+                    "ingredientId": 3,
+                    "imageUrl": "data/stash/composite/55003.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 60
+                    }
+                },
+                {
+                    "ingredientId": 4,
+                    "imageUrl": "data/stash/composite/55004.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 60
+                    }
+                },
+                {
+                    "ingredientId": 5,
+                    "imageUrl": "data/stash/composite/55005.webp",
+                    "purchasePrice": {
+                        "currency": "dollar",
+                        "amount": 60
+                    }
+                }
+            ],
+            "rewards": {
+                "exp": 9000,
+                "wallet": {
+                    "gold": 18000,
+                    "dollar": 0,
+                    "pills": 6000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 11900
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 1375
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 75
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 55,
+            "kind": "standard",
+            "requiredSets": [],
+            "medallionReward": null
+        },
+        {
+            "setId": 56,
+            "title": "Набор «Амулет павших»",
+            "description": "Собирается из пяти новых заначек",
+            "previewImageUrl": "data/stash/composite/56/preview.webp",
+            "ingredients": [],
+            "rewards": {
+                "exp": 45000,
+                "wallet": {
+                    "gold": 90000,
+                    "dollar": 0,
+                    "pills": 30000
+                },
+                "effects": [
+                    {
+                        "stat": "madness",
+                        "amount": 40600
+                    },
+                    {
+                        "stat": "aggression",
+                        "amount": 4375
+                    },
+                    {
+                        "stat": "rage",
+                        "amount": 215
+                    }
+                ],
+                "effectsDurationSeconds": 3600
+            },
+            "isActive": true,
+            "sortOrder": 56,
+            "kind": "composite",
+            "requiredSets": [
+                {
+                    "setId": 51,
+                    "required": 1,
+                    "title": "Набор «Кузнечный каркас»",
+                    "previewImageUrl": "data/stash/composite/51001preview.webp"
+                },
+                {
+                    "setId": 52,
+                    "required": 1,
+                    "title": "Набор «Оправа реликвии»",
+                    "previewImageUrl": "data/stash/composite/52002preview.webp"
+                },
+                {
+                    "setId": 53,
+                    "required": 1,
+                    "title": "Набор «Осколок бастиона»",
+                    "previewImageUrl": "data/stash/composite/53003preview.webp"
+                },
+                {
+                    "setId": 54,
+                    "required": 1,
+                    "title": "Набор «Легендарный сегмент»",
+                    "previewImageUrl": "data/stash/composite/54004preview.webp"
+                },
+                {
+                    "setId": 55,
+                    "required": 1,
+                    "title": "Набор «Самоцветный узел»",
+                    "previewImageUrl": "data/stash/composite/55005preview.webp"
+                }
+            ],
+            "medallionReward": {
+                "medallionId": 1,
+                "name": "Амулет павших",
+                "imageUrl": "data/stash/composite/56/preview.webp",
+                "quantity": 1
+            }
+        }
+    ]
+}
